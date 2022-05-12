@@ -1,0 +1,211 @@
+@font-face {
+  font-family: main;
+  src: url(../../Rock3D-Regular.ttf);
+}
+::selection {
+  background: #d9d4a9;
+}
+:root {
+  --tan: #d9d4a9;
+  --white: #d1d0d1;
+  --lightBrown: #6f401c;
+  --darkBrown: #380c05;
+  --lightBlue: #c5cfc4;
+  --darkerBlue: #a6ada8;
+  --cream: #fdffe4;
+  --primary-color: #e8f2fe;
+  --secondary-color: #af1c9f;
+}
+body {
+  background-color: var(--cream);
+}
+.app-container {
+  background-color: black;
+}
+.home-container {
+  box-sizing: border-box;
+  border: 1px solid black;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--tan);
+  overflow: hidden;
+  align-items: center;
+  text-align: center;
+}
+.logo-container {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.threeD {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+  width: 100vw;
+}
+.smile-logo {
+  position: absolute;
+  height: 30vh;
+  -moz-user-select: none;
+  pointer-events: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.links {
+  list-style-type: none;
+  text-align: left;
+}
+.welcome-text {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  font-size: 15vh;
+  font-family: main;
+  font-weight: 900;
+  height: 1em;
+  left: 5vw;
+  top: 15vh;
+  color: white;
+  user-select: none;
+}
+.im-floop-text {
+  user-select: none;
+  height: 1em;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  right: 5vw;
+  bottom: 10vh;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  font-size: 15vh;
+  font-family: main;
+  font-weight: 600;
+  color: white;
+}
+.xSign {
+  position: absolute;
+  z-index: 100;
+  top: 10%;
+  right: 10vh;
+  transform: rotate(90deg);
+  user-select: none;
+  font-size: 60px;
+  height: 60px;
+  width: 60px;
+  justify-content: space-evenly;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  font-family: Secondary;
+}
+
+.line {
+  font-weight: 900;
+  font-family: main;
+  color: white;
+}
+.about-text {
+  width: 20vw;
+  position: absolute;
+  right: 2.5vw;
+  top: 30vh;
+}
+.about-line {
+  color: black;
+  font-size: 2.1vh;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  line-height: 1.3;
+}
+.loading-container > p {
+  font-size: 5vh;
+}
+.char {
+  font-size: 10vh;
+}
+.main-text-char {
+}
+.main-text-char:hover {
+  color: blue;
+  user-select: none;
+}
+
+.underline-on-hover {
+  margin-right: 0;
+  display: inline;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  color: black;
+}
+.underline-on-hover:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  width: 0;
+  bottom: -1px;
+  background: #000;
+  height: 0.25vh;
+  transition-property: width;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+}
+.underline-on-hover:hover:after,
+.underline-on-hover:focus:after,
+.underline-on-hover:active:after {
+  right: auto;
+  left: 0;
+  width: 100%;
+}
+.logos {
+  justify-content: space-evenly;
+  display: flex;
+  flex-direction: row;
+}
+.logo {
+  height: 6vh;
+}
+.logo:hover {
+  border-radius: 50%;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.151);
+  transform: scale(1.05);
+}
+.logo:active {
+  border-radius: 7%;
+}
+.info-image {
+  position: absolute;
+  height: 4vh;
+  bottom: 2vh;
+  left: 2vh;
+}
+.info-on-hover {
+  border-radius: 15px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4vh;
+  opacity: 0;
+  position: absolute;
+  left: 8vh;
+  bottom: 2vh;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 2vh;
+  letter-spacing: 1px;
+  padding: 0 10px;
+}
