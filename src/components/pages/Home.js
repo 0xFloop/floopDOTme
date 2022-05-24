@@ -5,7 +5,7 @@ import { gsap } from "gsap";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { useGLTF, OrbitControls, ContactShadows, Environment, Shadow } from "@react-three/drei";
 import Model from "../CreamLogo3D.js";
-
+var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 const Home = () => {
   const [display3D, setDisplay3D] = useState(false);
   const [loading, setloading] = useState(true);
@@ -23,19 +23,32 @@ const Home = () => {
     console.log("hover");
     setInfoHover(!infoHover);
   }
-
-  const mobileTl = gsap
-    .timeline({ paused: true })
-    .fromTo(".xSign", { transform: "rotate(90deg)" }, { transform: "rotate(90deg) translateX(13px)" })
-    .fromTo(".one", { transform: "rotate(-360deg)" }, { transform: "rotate(225deg)" }, "<")
-    .fromTo(".two", { transform: "rotate(0deg)" }, { transform: `translateX(-11px) rotate(135deg)` }, "<")
-    .fromTo(".three", { opacity: 1, transform: "rotate(0deg)" }, { transform: "rotate(135deg) translateX(0.84ch) translateY(0.9rem)", opacity: 0 }, "<")
-    .to(".home-container", { width: vw(70), height: vh(85), borderRadius: vh(10), left: vw(5), top: vh(7.5), duration: 0.5 }, "<")
-    .to(".line", { color: "#d9d4a9" }, "<")
-    .to(".logo-container", { top: -vh(7.5) }, "<")
-    .fromTo(".about-text", { x: 50, opacity: 0 }, { x: 0, opacity: 1 }, "<0.15")
-    .fromTo(".logo", { y: vh(7.5), opacity: 0 }, { y: 0, opacity: 1, stagger: 0.05 }, "<")
-    .reversed(true);
+  const mobileTl = gsap.timeline({ paused: true });
+  if (isMobile) {
+    mobileTl
+      .fromTo(".xSign", { transform: "rotate(90deg)" }, { transform: "rotate(90deg) translateX(13px)" })
+      .fromTo(".one", { transform: "rotate(-360deg)" }, { transform: "rotate(225deg)" }, "<")
+      .fromTo(".two", { transform: "rotate(0deg)" }, { transform: `translateX(-11px) rotate(135deg)` }, "<")
+      .fromTo(".three", { opacity: 1, transform: "rotate(0deg)" }, { transform: "rotate(135deg) translateX(0.84ch) translateY(0.9rem)", opacity: 0 }, "<")
+      .to(".home-container", { borderRadius: vh(5), top: vh(100), duration: 0.5 }, "<")
+      .to(".line", { color: "#d9d4a9" }, "<")
+      .to(".logo-container", { top: -vh(7.5) }, "<")
+      .fromTo(".about-text", { x: 50, opacity: 0 }, { x: 0, opacity: 1 }, "<0.15")
+      .fromTo(".logo", { y: vh(7.5), opacity: 0 }, { y: 0, opacity: 1, stagger: 0.05 }, "<")
+      .reversed(true);
+  } else {
+    mobileTl
+      .fromTo(".xSign", { transform: "rotate(90deg)" }, { transform: "rotate(90deg) translateX(13px)" })
+      .fromTo(".one", { transform: "rotate(-360deg)" }, { transform: "rotate(225deg)" }, "<")
+      .fromTo(".two", { transform: "rotate(0deg)" }, { transform: `translateX(-11px) rotate(135deg)` }, "<")
+      .fromTo(".three", { opacity: 1, transform: "rotate(0deg)" }, { transform: "rotate(135deg) translateX(0.84ch) translateY(0.9rem)", opacity: 0 }, "<")
+      .to(".home-container", { width: vw(70), height: vh(85), borderRadius: vh(10), left: vw(5), top: vh(7.5), duration: 0.5 }, "<")
+      .to(".line", { color: "#d9d4a9" }, "<")
+      .to(".logo-container", { top: -vh(7.5) }, "<")
+      .fromTo(".about-text", { x: 50, opacity: 0 }, { x: 0, opacity: 1 }, "<0.15")
+      .fromTo(".logo", { y: vh(7.5), opacity: 0 }, { y: 0, opacity: 1, stagger: 0.05 }, "<")
+      .reversed(true);
+  }
 
   const menuClick = () => {
     mobileTl.reversed(!mobileTl.reversed()); // swaps the reversed state
@@ -92,7 +105,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div>
+    <div className="bg">
       {loading && (
         <div className="loading-container">
           <p className="char">L</p>
@@ -133,10 +146,10 @@ const Home = () => {
             SomethingToken
           </a>
           <br></br>
-          <br></br>-{" "}
+          {/* <br></br>-{" "}
           <a href="http://149.28.122.125/" target="_blank" className="underline-on-hover">
             MidnightNFT
-          </a>
+          </a> */}
           <br></br>
           <br></br>
         </p>

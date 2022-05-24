@@ -209,3 +209,34 @@ body {
   letter-spacing: 1px;
   padding: 0 10px;
 }
+
+@media screen and (max-width: 680px) {
+  .bg {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+  }
+  .about-text {
+    width: 80vw;
+    right: 10vw;
+  }
+  .welcome-text {
+    font-size: 7vh;
+    width: 100vw;
+    left: 0;
+    top: 25vh;
+  }
+  .im-floop-text {
+    font-size: 7vh;
+    width: 100vw;
+    left: 0;
+    top: 75vh;
+  }
+  .xSign {
+    position: absolute;
+    z-index: 100;
+    top: 5vh;
+    right: 5vh;
+  }
+}
