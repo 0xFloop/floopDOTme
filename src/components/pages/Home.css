@@ -183,9 +183,7 @@ body {
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.151);
   transform: scale(1.05);
 }
-.logo:active {
-  border-radius: 7%;
-}
+
 .info-image {
   position: absolute;
   height: 4vh;
