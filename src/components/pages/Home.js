@@ -146,10 +146,10 @@ const Home = () => {
             SomethingToken
           </a>
           <br></br>
-          {/* <br></br>-{" "}
-          <a href="http://149.28.122.125/" target="_blank" className="underline-on-hover">
+          <br></br>-{" "}
+          <a href="https://www.midnightnft.io/" target="_blank" className="underline-on-hover">
             MidnightNFT
-          </a> */}
+          </a>
           <br></br>
           <br></br>
         </p>
