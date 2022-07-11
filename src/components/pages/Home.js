@@ -133,7 +133,11 @@ const Home = () => {
       <div className="about-text">
         <p className="about-line">Hi, I'm Floop</p>
         <p className="about-line">
-          I am a self-taught software developer working in the crypto space. <br></br>
+          I am a self-taught fullstack(ish) developer currently writing solidity at{" "}
+          <a href="https://www.americana.io" target="_blank" style={{ color: "black", textDecoration: "underline" }}>
+            Americana.
+          </a>
+          <br></br>
           <br></br> Here are some links to things I've built:
           <br></br>
           <br></br>-{" "}
