@@ -17,7 +17,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "deploy-production": "react-scripts build && scp -r ./build/* floop@207.148.11.201:/var/www/floop.me/html",
+    "deploy-production": "GENERATE_SOURCEMAP=false react-scripts build && scp -r ./build/* floop@207.148.11.201:/var/www/floop.me/html",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
