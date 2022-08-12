@@ -26,10 +26,24 @@ const Home = () => {
   const mobileTl = gsap.timeline({ paused: true });
   if (isMobile) {
     mobileTl
-      .fromTo(".xSign", { transform: "rotate(90deg)" }, { transform: "rotate(90deg) translateX(13px)" })
+      .fromTo(
+        ".xSign",
+        { transform: "rotate(90deg)" },
+        { transform: "rotate(90deg) translateX(13px)" }
+      )
       .fromTo(".one", { transform: "rotate(-360deg)" }, { transform: "rotate(225deg)" }, "<")
-      .fromTo(".two", { transform: "rotate(0deg)" }, { transform: `translateX(-11px) rotate(135deg)` }, "<")
-      .fromTo(".three", { opacity: 1, transform: "rotate(0deg)" }, { transform: "rotate(135deg) translateX(0.84ch) translateY(0.9rem)", opacity: 0 }, "<")
+      .fromTo(
+        ".two",
+        { transform: "rotate(0deg)" },
+        { transform: `translateX(-11px) rotate(135deg)` },
+        "<"
+      )
+      .fromTo(
+        ".three",
+        { opacity: 1, transform: "rotate(0deg)" },
+        { transform: "rotate(135deg) translateX(0.84ch) translateY(0.9rem)", opacity: 0 },
+        "<"
+      )
       .to(".home-container", { borderRadius: vh(5), top: vh(100), duration: 0.5 }, "<")
       .to(".line", { color: "#d9d4a9" }, "<")
       .to(".logo-container", { top: -vh(7.5) }, "<")
@@ -38,11 +52,36 @@ const Home = () => {
       .reversed(true);
   } else {
     mobileTl
-      .fromTo(".xSign", { transform: "rotate(90deg)" }, { transform: "rotate(90deg) translateX(13px)" })
+      .fromTo(
+        ".xSign",
+        { transform: "rotate(90deg)" },
+        { transform: "rotate(90deg) translateX(13px)" }
+      )
       .fromTo(".one", { transform: "rotate(-360deg)" }, { transform: "rotate(225deg)" }, "<")
-      .fromTo(".two", { transform: "rotate(0deg)" }, { transform: `translateX(-11px) rotate(135deg)` }, "<")
-      .fromTo(".three", { opacity: 1, transform: "rotate(0deg)" }, { transform: "rotate(135deg) translateX(0.84ch) translateY(0.9rem)", opacity: 0 }, "<")
-      .to(".home-container", { width: vw(70), height: vh(85), borderRadius: vh(10), left: vw(5), top: vh(7.5), duration: 0.5 }, "<")
+      .fromTo(
+        ".two",
+        { transform: "rotate(0deg)" },
+        { transform: `translateX(-11px) rotate(135deg)` },
+        "<"
+      )
+      .fromTo(
+        ".three",
+        { opacity: 1, transform: "rotate(0deg)" },
+        { transform: "rotate(135deg) translateX(0.84ch) translateY(0.9rem)", opacity: 0 },
+        "<"
+      )
+      .to(
+        ".home-container",
+        {
+          width: vw(70),
+          height: vh(85),
+          borderRadius: vh(10),
+          left: vw(5),
+          top: vh(7.5),
+          duration: 0.5,
+        },
+        "<"
+      )
       .to(".line", { color: "#d9d4a9" }, "<")
       .to(".logo-container", { top: -vh(7.5) }, "<")
       .fromTo(".about-text", { x: 50, opacity: 0 }, { x: 0, opacity: 1 }, "<0.15")
@@ -82,7 +121,17 @@ const Home = () => {
       .to(".char", { y: -30, ease: "Power2.easeInOut", stagger: 0.05 })
       .to(".char", { y: 0, ease: "Power2.easeInOut", stagger: 0.05 }, "<0.35")
       .to(".char", { y: -30, ease: "Power2.easeInOut", stagger: 0.05 })
-      .to(".char", { y: 0, ease: "Power2.easeInOut", stagger: 0.05, onComplete: setloading, onCompleteParams: false }, "<0.35")
+      .to(
+        ".char",
+        {
+          y: 0,
+          ease: "Power2.easeInOut",
+          stagger: 0.05,
+          onComplete: setloading,
+          onCompleteParams: false,
+        },
+        "<0.35"
+      )
       .fromTo(
         ".smile-logo",
         {
@@ -99,9 +148,23 @@ const Home = () => {
         }
       )
       .to(".smile-logo", { duration: 0.1, rotation: "-180_ccw", display: "none", delay: 0.2 })
-      .fromTo(".threeD", { opacity: 0, rotation: "-180_ccw" }, { opacity: 1, rotation: "-360_ccw", duration: 0.1 })
-      .fromTo(".main-text-char", { opacity: 0 }, { opacity: 1, y: -30, ease: "back.out(4.4)", stagger: 0.05 }, "<")
-      .fromTo(".xSign", { display: "none", opacity: 0, y: 30 }, { display: "flex", opacity: 1, y: 0, ease: "back.out(4.4)" }, "<");
+      .fromTo(
+        ".threeD",
+        { opacity: 0, rotation: "-180_ccw" },
+        { opacity: 1, rotation: "-360_ccw", duration: 0.1 }
+      )
+      .fromTo(
+        ".main-text-char",
+        { opacity: 0 },
+        { opacity: 1, y: -30, ease: "back.out(4.4)", stagger: 0.05 },
+        "<"
+      )
+      .fromTo(
+        ".xSign",
+        { display: "none", opacity: 0, y: 30 },
+        { display: "flex", opacity: 1, y: 0, ease: "back.out(4.4)" },
+        "<"
+      );
   }, []);
 
   return (
@@ -134,7 +197,11 @@ const Home = () => {
         <p className="about-line">Hi, I'm Floop</p>
         <p className="about-line">
           I am a self-taught fullstack(ish) developer currently writing solidity at{" "}
-          <a href="https://www.americana.io" target="_blank" style={{ color: "black", textDecoration: "underline" }}>
+          <a
+            href="https://www.americana.io"
+            target="_blank"
+            style={{ color: "black", textDecoration: "underline" }}
+          >
             Americana.
           </a>
           <br></br>
@@ -156,6 +223,11 @@ const Home = () => {
           </a>
           <br></br>
           <br></br>
+          <br></br> Things I'm learning:
+          <br></br>
+          <br></br> - Rust
+          <br></br>
+          <br></br> - Yul
         </p>
         <div className="logos">
           <a href="https://www.twitter.com/0xFloop" target="_blank">
