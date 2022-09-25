@@ -24,7 +24,6 @@ body {
 }
 .home-container {
   box-sizing: border-box;
-  border: 1px solid black;
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -207,7 +206,12 @@ body {
   letter-spacing: 1px;
   padding: 0 10px;
 }
-
+.bg {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
 @media screen and (max-width: 680px) {
   .bg {
     position: relative;
