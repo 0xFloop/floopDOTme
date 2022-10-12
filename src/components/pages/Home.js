@@ -217,17 +217,13 @@ const Home = () => {
             SomethingToken
           </a>
           <br></br>
-          <br></br>-{" "}
-          <a href="https://www.midnightnft.io/" target="_blank" className="underline-on-hover">
-            MidnightNFT
-          </a>
-          <br></br>
           <br></br>
           <br></br> Things I'm learning:
           <br></br>
           <br></br> - Rust
           <br></br>
-          <br></br> - Yul
+          <br></br> - Yul & Huff
+          <br></br>
         </p>
         <div className="logos">
           <a href="https://www.twitter.com/0xFloop" target="_blank">
